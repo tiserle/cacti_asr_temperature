@@ -5,7 +5,7 @@
 			<t_title></t_title>
 			<title>|host_description| - CPU -|query_cpuDesc|</title>
 			<t_vertical_label></t_vertical_label>
-			<vertical_label>Percent</vertical_label>
+			<vertical_label>Temperature</vertical_label>
 			<t_image_format_id></t_image_format_id>
 			<image_format_id>1</image_format_id>
 			<t_height></t_height>
@@ -95,7 +95,7 @@
 				<value></value>
 				<gprint_id>hash_06010319414480d6897c8731c7dc6c5310653e</gprint_id>
 				<textalign></textalign>
-				<text_format>Percent</text_format>
+				<text_format>Temperature</text_format>
 				<hard_return></hard_return>
 				<line_width>0.00</line_width>
 				<dashes></dashes>
