@@ -3,7 +3,7 @@
 		<name>Cisco Device - Line Card Temperature</name>
 		<ds>
 			<t_name></t_name>
-			<name>|host_description| - CPU - |query_cpuDesc|</name>
+			<name>|host_description| - Temperature - |query_entPhysicalName|</name>
 			<data_source_path></data_source_path>
 			<data_input_id>hash_030103332111d8b54ac8ce939af87a7eac0c06</data_input_id>
 			<t_data_source_profile_id></t_data_source_profile_id>
@@ -16,7 +16,7 @@
 		<items>
 			<hash_080103d20d13cb09c75f8f409a5b1ce4c54f74>
 				<t_data_source_name></t_data_source_name>
-				<data_source_name>oneMin</data_source_name>
+				<data_source_name>entSensorValue</data_source_name>
 				<t_rrd_minimum></t_rrd_minimum>
 				<rrd_minimum>0</rrd_minimum>
 				<t_rrd_maximum></t_rrd_maximum>

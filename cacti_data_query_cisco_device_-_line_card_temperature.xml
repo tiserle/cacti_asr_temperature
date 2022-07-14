@@ -1,4 +1,70 @@
 <cacti>	
+	<hash_0401031aabb01226e6e2f0247eaead876ef278>
+		<name>Cisco Device - Line Card Temperature</name>
+		<description>Queries a Cisco device for temperature per card</description>
+		<xml_path>&lt;path_cacti&gt;/resource/script_server/cisco_temperature.xml</xml_path>
+		<data_input_id>hash_030103332111d8b54ac8ce939af87a7eac0c06</data_input_id>
+		<graphs>
+			<hash_1101033d41cd82288b02fc7d9f02a4395d83f0>
+				<graph_template_id>hash_000103b990b76275b5ccc5c01f501e87d989c9</graph_template_id>
+				<name>Cisco Device - Line Card Temperature</name>
+				<rrd>
+					<item_000>
+						<snmp_field_name>cpmTemperature</snmp_field_name>
+						<data_template_id>hash_010103e38d4f001d3ff7457e336dd6197cf62e</data_template_id>
+						<data_template_rrd_id>hash_080103d20d13cb09c75f8f409a5b1ce4c54f74</data_template_rrd_id>
+					</item_000>
+				</rrd>
+				<sv_graph>
+				</sv_graph>
+				<sv_data_source>
+				</sv_data_source>
+			</hash_1101033d41cd82288b02fc7d9f02a4395d83f0>
+		</graphs>
+	</hash_0401031aabb01226e6e2f0247eaead876ef278>
+	<hash_030103332111d8b54ac8ce939af87a7eac0c06>
+		<name>Get Script Server Data (Indexed)</name>
+		<type_id>6</type_id>
+		<input_string></input_string>
+		<fields>
+			<hash_070103172b4b0eacee4948c6479f587b62e512>
+				<name>Index Type</name>
+				<update_rra></update_rra>
+				<regexp_match></regexp_match>
+				<allow_nulls></allow_nulls>
+				<type_code>index_type</type_code>
+				<input_output>in</input_output>
+				<data_name>index_type</data_name>
+			</hash_070103172b4b0eacee4948c6479f587b62e512>
+			<hash_07010330fb5d5bcf3d66bb5abe88596f357c26>
+				<name>Index Value</name>
+				<update_rra></update_rra>
+				<regexp_match></regexp_match>
+				<allow_nulls></allow_nulls>
+				<type_code>index_value</type_code>
+				<input_output>in</input_output>
+				<data_name>index_value</data_name>
+			</hash_07010330fb5d5bcf3d66bb5abe88596f357c26>
+			<hash_07010331112c85ae4ff821d3b288336288818c>
+				<name>Output Type ID</name>
+				<update_rra></update_rra>
+				<regexp_match></regexp_match>
+				<allow_nulls></allow_nulls>
+				<type_code>output_type</type_code>
+				<input_output>in</input_output>
+				<data_name>output_type</data_name>
+			</hash_07010331112c85ae4ff821d3b288336288818c>
+			<hash_0701035be8fa85472d89c621790b43510b5043>
+				<name>Output Value</name>
+				<update_rra>on</update_rra>
+				<regexp_match></regexp_match>
+				<allow_nulls></allow_nulls>
+				<type_code></type_code>
+				<input_output>out</input_output>
+				<data_name>output</data_name>
+			</hash_0701035be8fa85472d89c621790b43510b5043>
+		</fields>
+	</hash_030103332111d8b54ac8ce939af87a7eac0c06>
 	<hash_000103b990b76275b5ccc5c01f501e87d989c9>
 		<name>Cisco Device - Line Card Temperature</name>
 		<graph>
@@ -236,49 +302,6 @@
 			</item_002>
 		</data>
 	</hash_010103e38d4f001d3ff7457e336dd6197cf62e>
-	<hash_030103332111d8b54ac8ce939af87a7eac0c06>
-		<name>Get Script Server Data (Indexed)</name>
-		<type_id>6</type_id>
-		<input_string></input_string>
-		<fields>
-			<hash_070103172b4b0eacee4948c6479f587b62e512>
-				<name>Index Type</name>
-				<update_rra></update_rra>
-				<regexp_match></regexp_match>
-				<allow_nulls></allow_nulls>
-				<type_code>index_type</type_code>
-				<input_output>in</input_output>
-				<data_name>index_type</data_name>
-			</hash_070103172b4b0eacee4948c6479f587b62e512>
-			<hash_07010330fb5d5bcf3d66bb5abe88596f357c26>
-				<name>Index Value</name>
-				<update_rra></update_rra>
-				<regexp_match></regexp_match>
-				<allow_nulls></allow_nulls>
-				<type_code>index_value</type_code>
-				<input_output>in</input_output>
-				<data_name>index_value</data_name>
-			</hash_07010330fb5d5bcf3d66bb5abe88596f357c26>
-			<hash_07010331112c85ae4ff821d3b288336288818c>
-				<name>Output Type ID</name>
-				<update_rra></update_rra>
-				<regexp_match></regexp_match>
-				<allow_nulls></allow_nulls>
-				<type_code>output_type</type_code>
-				<input_output>in</input_output>
-				<data_name>output_type</data_name>
-			</hash_07010331112c85ae4ff821d3b288336288818c>
-			<hash_0701035be8fa85472d89c621790b43510b5043>
-				<name>Output Value</name>
-				<update_rra>on</update_rra>
-				<regexp_match></regexp_match>
-				<allow_nulls></allow_nulls>
-				<type_code></type_code>
-				<input_output>out</input_output>
-				<data_name>output</data_name>
-			</hash_0701035be8fa85472d89c621790b43510b5043>
-		</fields>
-	</hash_030103332111d8b54ac8ce939af87a7eac0c06>
 	<hash_200103d62c52891f4f9688729a5bc9fad91b18>
 		<name>5 Minute Collection</name>
 		<step>300</step>

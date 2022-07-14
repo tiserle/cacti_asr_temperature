@@ -22,7 +22,6 @@ if (!isset($called_by_script_server)) {
         include_once($config['library_path'] . '/snmp.php');
 }
 
-
 function ss_cisco_temperature($hostname, $host_id, $snmp_auth, $cmd, $arg1 = '', $arg2 = '')
 {
     # |host_hostname| |host_id| |host_snmp_version|:|host_snmp_port|:|host_snmp_timeout|:
@@ -107,7 +106,7 @@ function ss_cisco_temperature($hostname, $host_id, $snmp_auth, $cmd, $arg1 = '',
         return sizeof($arr_index);
     } elseif ($cmd == 'query') {
         switch ($arg1) {
-            case "tempDesc":
+            case "entPhysicalName":
                 $arr = ss_cisco_temperature_desc($hostname, $host_args);
                 break;
 
@@ -129,6 +128,8 @@ function ss_cisco_temperature($hostname, $host_id, $snmp_auth, $cmd, $arg1 = '',
                     $host_args['max_oids'],
                     SNMP_POLLER
                 ));
+		//print_r($host_args);
+		//print_r($arr);
                 break;
         }
 
@@ -142,8 +143,9 @@ function ss_cisco_temperature($hostname, $host_id, $snmp_auth, $cmd, $arg1 = '',
         switch ($arg1) {
 
 
-            case "TempDesc":
+            case "entPhysicalName":
                 $arr = ss_cisco_temperature_desc($hostname, $host_args);
+		//print_r($arr);
 
                 if (isset($arr[$index])) {
                     return $arr[$index];
@@ -266,6 +268,15 @@ function ss_cisco_temperature_reindex($arr)
         if (is_numeric($index)) {
             $return_arr[$index] = $arr[$i]['value'];
         }
+     }
+     elseif(is_numeric($arr[$i]['value'])) {
+       //if(($arr[$i]['value'] > 100) && ($arr[$i]['value'] < 999))
+       //{
+        $index = substr($arr[$i]['oid'], strrpos($arr[$i]['oid'], '.') + 1);
+        if (is_numeric($index)) {
+            $return_arr[$index] = $arr[$i]['value'];
+        }
+       //}
      }
     }
     //print_r($return_arr);
